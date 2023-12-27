@@ -5,7 +5,7 @@ const nombres = [];
 const sorteos = [];
 
 nombre.addEventListener("keyup", function (e) {
-if (e.key === 'Enter' || e.keyCode === 13) {
+if (e.key === 'Enter') {
 	cargar();
 }
 });
@@ -26,10 +26,12 @@ function cargar () {
 }
 
 function borrarParticipantes () {
-	while(nombres.length > 0) {
-		nombres.pop();
+	if(confirm("Seguro quiere borrar todos los participantes?")) {
+		while(nombres.length > 0) {
+			nombres.pop();
+		}
+		participantes.value = "";
 	}
-	participantes.value = "";
 }
 
 function borrarSorteos () {
