@@ -84,7 +84,7 @@
 					return 0;
 				});
 			for(let i = 0; i < sorteos.length; i++) {
-				sorteo.value += (i+1) + ": " + "(" + sorteos[i].posicion + ") " + sorteos[i].nombre + " p: " + sorteos[i].puntaje + "\n";
+				sorteo.value += (i+1) + ": " + "(" + sorteos[i].posicion + ") " + sorteos[i].nombre + "\n";
 			}
 		}
 
@@ -99,7 +99,7 @@
 				sorteos.push(aux.reduce((previous, current) => {
 					return current.puntaje > previous.puntaje ? current : previous;
 				}));
-				sorteo.value += sorteos.length + ": " + "(" + sorteos[sorteos.length-1].posicion + ") " + sorteos[sorteos.length-1].nombre + " p: " + sorteos[sorteos.length-1].puntaje + "\n";
+				sorteo.value += sorteos.length + ": " + "(" + sorteos[sorteos.length-1].posicion + ") " + sorteos[sorteos.length-1].nombre + "\n";
 			}
 		}
 
